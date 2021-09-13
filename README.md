@@ -28,4 +28,6 @@ Remove  |__O(n)__|__O(1)__|
 
 📌 <a href="quick_sort/quick_sort.go">Quick sort</a>
 
-📌 <a href="smallest_search/smallest_search.go">The smallest search</a>
+📌 <a href="smallest_search/smallest_search.go">Smallest search</a>
+
+📌 <a href="subsequences_search/subsequences_search.go">Subsequences search</a>
