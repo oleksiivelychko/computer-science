@@ -14,3 +14,5 @@ go test -bench=. ./dirname
 📌 <a href="breadth_first_search/breadth_first_search.go">Breadth-first search</a>
 
 📌 <a href="dijkstra_search/dijkstra_search.go">Dijkstra's search</a>
+
+📌 <a href="factorial/factorial.go">Factorial</a>
