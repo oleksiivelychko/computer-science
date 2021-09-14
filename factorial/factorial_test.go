@@ -5,7 +5,7 @@ import "testing"
 func TestFactorial(t *testing.T) {
 	result := Factorial(3)
 	if result != 6 {
-		t.Errorf("[Factorial(x uint) uint] -> %d != 6", result)
+		t.Errorf("[Factorial(x uint8) uint8] -> %d != 6", result)
 	}
 }
 
