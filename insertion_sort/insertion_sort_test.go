@@ -4,19 +4,19 @@ import (
 	"testing"
 )
 
-var array = []uint{18, 21, 11}
+var array = [3]int{21, -1, 11}
 
 func TestSelectionSort(t *testing.T) {
 	var sorted = InsertionSort(array[:])
 
-	if sorted[0] != 11 {
-		t.Errorf("[func InsertionSort(slice []uint) []uint] -> %d != 11", sorted[0])
+	if sorted[0] != -1 {
+		t.Errorf("[func InsertionSort(slice []int) []int] -> %d != -1", sorted[0])
 	}
-	if sorted[1] != 18 {
-		t.Errorf("[func InsertionSort(slice []uint) []uint] -> %d != 18", sorted[1])
+	if sorted[1] != 11 {
+		t.Errorf("[func InsertionSort(slice []int) []int] -> %d != 11", sorted[1])
 	}
 	if sorted[2] != 21 {
-		t.Errorf("[func InsertionSort(slice []uint) []uint] -> %d != 21", sorted[2])
+		t.Errorf("[func InsertionSort(slice []int) []int] -> %d != 21", sorted[2])
 	}
 }
 
