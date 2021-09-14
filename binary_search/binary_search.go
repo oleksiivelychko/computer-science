@@ -13,17 +13,17 @@ Array must be sortable before.
 3. If middle item greater than value then search will be in right side of array.
 4. Repeat steps 1,2,3.
 */
-func BinarySearch(slice []uint, target uint) int {
+func BinarySearch(slice []int, target int) (bool, int) {
 
-	var bottom uint = 0
-	var top = uint(len(slice) - 1)
+	var bottom int = 0
+	var top = len(slice) - 1
 
 	for bottom < top {
 
 		var middle = bottom + top
 
 		if slice[middle] == target {
-			return int(middle)
+			return true, middle
 		}
 
 		if slice[middle] > target {
@@ -35,32 +35,32 @@ func BinarySearch(slice []uint, target uint) int {
 		}
 	}
 
-	return -1
+	return false, 0
 }
 
-func BinarySearchRecursion(slice []uint, target uint) int {
+func BinarySearchRecursion(slice []int, target int) (bool, int) {
 
-	var bottom uint = 0
-	var top = uint(len(slice) - 1)
+	var bottom int = 0
+	var top = len(slice) - 1
 	var middle = -1
 
 	if bottom < top {
-		middle = int(bottom + top)
+		middle = bottom + top
 
 		if slice[middle] == target {
-			return middle
+			return true, middle
 		}
 
 		if slice[middle] > target {
-			top = uint(middle - 1)
+			top = middle - 1
 		}
 
 		if slice[middle] < target {
-			bottom = uint(middle + 1)
+			bottom = middle + 1
 		}
 
-		middle = BinarySearchRecursion(slice[bottom:top+1], target)
+		_, middle = BinarySearchRecursion(slice[bottom:top+1], target)
 	}
 
-	return middle
+	return false, middle
 }
