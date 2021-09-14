@@ -4,12 +4,12 @@ import (
 	"testing"
 )
 
-var slice = []uint{5, 2, 6, 3, 0, 11, 8}
+var slice = []int{10, 1, -1, -2, 2}
 
 func TestSmallestSearch(t *testing.T) {
 	result := SmallestSearch(slice, slice[0])
-	if result != 0 {
-		t.Errorf("[func SmallestSearch(slice []uint) uint] -> %d != 0", result)
+	if result != -2 {
+		t.Errorf("[func SmallestSearch(slice []int) int] -> %d != -2", result)
 	}
 }
 

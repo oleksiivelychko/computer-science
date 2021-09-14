@@ -1,6 +1,6 @@
 package smallest_search
 
-func SmallestSearch(slice []uint, smallest uint) uint {
+func SmallestSearch(slice []int, smallest int) int {
 	if len(slice) == 0 {
 		return smallest
 	}
